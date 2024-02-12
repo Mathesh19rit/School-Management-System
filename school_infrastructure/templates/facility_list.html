@@ -1,0 +1,13 @@
+<!-- school_infrastructure/templates/school_infrastructure/facility_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Facility List</h2>
+  <ul>
+    {% for facility in facilities %}
+      <li>{{ facility.name }} - Description: {{ facility.description }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

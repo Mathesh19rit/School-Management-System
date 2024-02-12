@@ -1,0 +1,14 @@
+<!-- fees_payment/templates/fees_payment/fees_payment_form.html -->
+
+{% extends "main.html" %}
+
+{% block content %}
+  <h2>Add Fees Payment</h2>
+  <form method="post" action="{% url 'fees_payment_create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+  <a href="{% url 'fees_payment_list' %}">Back to Fees Payment List</a>
+{% endblock %}
+

@@ -1,0 +1,13 @@
+<!-- school_infrastructure/templates/school_infrastructure/building_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Building List</h2>
+  <ul>
+    {% for building in buildings %}
+      <li>{{ building.name }} - Location: {{ building.location }} - Capacity: {{ building.capacity }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

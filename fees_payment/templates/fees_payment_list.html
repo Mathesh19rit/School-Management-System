@@ -1,0 +1,14 @@
+<!-- fees_payment/templates/fees_payment/fees_payment_list.html -->
+
+{% extends "main.html" %}
+
+{% block content %}
+  <h2>Fees Payment List</h2>
+  <ul>
+    {% for fee in fees %}
+      <li>{{ fee.student }} - Amount: {{ fee.amount }} - Payment Date: {{ fee.payment_date }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'fees_payment_create' %}">Add Fees Payment</a>
+{% endblock %}
+

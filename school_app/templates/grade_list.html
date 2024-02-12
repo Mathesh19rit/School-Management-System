@@ -1,0 +1,16 @@
+<!-- templates/grade_list.html -->
+
+<h2>Grades</h2>
+<table>
+  <tr>
+    <th>Enrollment</th>
+    <th>Grade</th>
+  </tr>
+  {% for grade in grades %}
+    <tr>
+      <td>{{ grade.enrollment }}</td>
+      <td>{{ grade.grade_value }}</td>
+    </tr>
+  {% endfor %}
+</table>
+

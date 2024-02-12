@@ -1,0 +1,13 @@
+<!-- sports/templates/sports/sport_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Sports List</h2>
+  <ul>
+    {% for sport in sports %}
+      <li>{{ sport.name }} - Description: {{ sport.description }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
